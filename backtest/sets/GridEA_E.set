@@ -1,0 +1,15 @@
+InpDirection=0
+InpUpper=4680
+InpLower=4580
+InpGrids=5
+InpAtrPeriod=120
+InpAtrMult=1.0
+InpHardSL=0
+InpInitBalance=100000
+InpRiskPct=0.5
+InpIdeaCapPct=0.51
+InpMagic=20261024
+InpFridayClose=true
+InpFridayHourNY=8
+InpNoGridAfterSL=true
+InpNotifyTrades=false

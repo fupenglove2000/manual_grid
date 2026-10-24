@@ -1,0 +1,8 @@
+# 回测生成的日志和报告：含账号、登录 IP，而且可以重新生成
+backtest/logs/
+# run_tester.ps1 自动生成的测试器配置（含账号）
+backtest/configs/
+# 编译产物（在 MT5 数据目录里生成，不放仓库）
+*.ex5
+# Python 缓存
+__pycache__/
