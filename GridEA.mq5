@@ -43,6 +43,9 @@ input bool                InpFridayClose   = true;      // 7. 周五平仓
 input int                 InpFridayHourNY  = 8;         // 7. 周五平仓时刻（纽约时间，0～16 点）
 input bool                InpNoGridAfterSL = true;      // 8. 硬止损后当天（服务器日期）不允许开新网格
 input bool                InpNotifyTrades  = false;     // 9. 每次止盈 / 补挂推送手机通知
+#ifdef GRIDEA_BT
+input bool                InpBtWeeklyRestart = true;    // 10. 回测：开盘后才开网格；周五平仓后下周开盘自动重开（模拟手动重新加载）
+#endif
 
 //==================================================================
 // 常量
@@ -247,6 +250,26 @@ ulong      g_ledCalcMs       = 0;
 datetime   g_statDay         = 0;            // 每日请求统计：当前统计的服务器日
 bool       g_lineDeferred[MAX_LINES];        // 因额度不足暂缓的线
 datetime   g_lineDeferUntil[MAX_LINES];      // 预计可挂时间（服务器时间；0 = 要等持仓/挂单减少）
+
+#ifdef GRIDEA_BT
+// 回测版（GridEA_bt.mq5）专用的统计，实盘版不编译这一段
+double     g_btMinFloat      = 0.0;          // 最大浮亏（净值 - 余额 的最小值）
+datetime   g_btMinFloatT     = 0;
+double     g_btLastFloat     = 0.0;          // 最后一个 tick 的浮动盈亏
+datetime   g_btDay           = 0;            // 当前服务器日
+double     g_btDayBal        = 0.0;          // 当天开始时的余额
+double     g_btDayMinEq      = 0.0;          // 当天最低净值
+double     g_btMaxDayLoss    = 0.0;          // 单日最大亏损（当天开始时的余额 - 当天最低净值）
+datetime   g_btMaxDayLossD   = 0;
+int        g_btDefers        = 0;            // 额度不足暂缓次数（同一格从第一次暂缓到挂出算一次）
+bool       g_btDeferOn[MAX_LINES];
+datetime   g_btDeferT0[MAX_LINES];
+long       g_btDeferSec      = 0;            // 暂缓累计时长（秒）
+int        g_btRestarts      = 0;            // 模拟重新加载 EA 的次数
+datetime   g_btStopT[];                      // 每次停止 / 拒绝的时间和原因
+int        g_btStopRs[];
+string     g_btStarts        = "";           // 每次开网格的时间、格数、格距、止损
+#endif
 
 //==================================================================
 // 基础工具
@@ -2081,6 +2104,9 @@ bool ComputeLedger()
 // 额度不足暂缓第 k 格：按平仓记录逐笔滑出算出预计可挂时间，推送说明（同一格 10 分钟内最多一次）
 void DeferLine(const int k, const double r, const double cap)
   {
+#ifdef GRIDEA_BT
+   BtDeferStart(k);
+#endif
    double need = g_ledUsed + r - cap;   // 需要滑出的风险
    int n = ArraySize(g_ledTime);
    for(int i = 1; i < n; i++)           // 按平仓时间从早到晚排序
@@ -2178,6 +2204,9 @@ void PlaceMissing(const MqlTick &tick)
          g_ledUsed += r;
          g_ledOrd  += r;
          g_lineDeferred[k] = false;
+#ifdef GRIDEA_BT
+         BtDeferEnd(k);
+#endif
         }
      }
   }
@@ -2285,6 +2314,9 @@ void StopGrid(const int code, const bool closeAll, const bool hard, const string
    if(g_phase == PH_STOPPED)
       return;
    g_reason = code;
+#ifdef GRIDEA_BT
+   BtNoteStop(code);
+#endif
    g_todo = TD_CANCEL | (closeAll ? TD_CLOSE : 0);
    if(hard)
       GVSet("HD", (double)ServerDay(TimeTradeServer()));   // 记录“今天发生过硬止损”
@@ -2589,6 +2621,14 @@ int PreCheck(string &why)
       return RS_REF_PARAMS;
      }
    datetime srv = TimeTradeServer();
+#ifdef GRIDEA_BT
+   // 回测：等开盘后的第一笔新报价再开网格（测试器从 00:00 开始时先给一个用上一交易日收盘价生成的报价）
+   if(g_tester && InpBtWeeklyRestart && (!InTradeSession(TimeCurrent()) || ServerDay(TimeCurrent()) != ServerDay(srv)))
+     {
+      g_startStageMs = NowMs();
+      return -1;
+     }
+#endif
    if(InpFridayClose && InWeekendBlock(srv))
      {
       why = WeekendRefuseText();
@@ -2725,6 +2765,9 @@ bool CheckParams(string &why)
 void Refuse(const int code, const string why)
   {
    g_reason = code;
+#ifdef GRIDEA_BT
+   BtNoteStop(code);
+#endif
    g_todo = 0;
    g_gridStart = 0;
    g_N = 0;
@@ -2773,6 +2816,9 @@ void FinalizeStart()
    int foreign = CountForeign();
    if(foreign > 0)
       Notify(StringFormat("注意：%s 上已有 %d 张手动（或其他魔术号）的持仓/挂单，不受网格管理", _Symbol, foreign));
+#ifdef GRIDEA_BT
+   BtNoteStart();
+#endif
   }
 
 // 开网格流程：阶段 1 撤旧挂单，阶段 2 检查并开网格
@@ -3008,6 +3054,10 @@ void Process()
       else
          if(g_phase == PH_STOPPED)
             ContinueStopActions();
+#ifdef GRIDEA_BT
+   if(g_phase == PH_STOPPED)
+      BtWeeklyRestart();
+#endif
    if(g_phase == PH_RUNNING)
      {
       datetime srv = TimeTradeServer();
@@ -3254,6 +3304,9 @@ int OnInit()
 void OnDeinit(const int reason)
   {
    EventKillTimer();
+#ifdef GRIDEA_BT
+   BtReport();
+#endif
    if(g_acctPfx != "")
       PrintFormat("【统计】服务器日 %s 截至目前交易请求 %d 次", TimeToString(ServerDay(TimeTradeServer()), TIME_DATE), ReqToday());
    bool removing = (reason == REASON_REMOVE || reason == REASON_CHARTCLOSE || reason == REASON_TEMPLATE);
@@ -3308,6 +3361,9 @@ void OnDeinit(const int reason)
 
 void OnTick()
   {
+#ifdef GRIDEA_BT
+   BtOnTick();
+#endif
    Process();
   }
 
@@ -3322,4 +3378,193 @@ void OnTradeTransaction(const MqlTradeTransaction &trans, const MqlTradeRequest 
    if(NowMs() - g_lastProcMs >= 200)
       Process();
   }
+
+#ifdef GRIDEA_BT
+//==================================================================
+// 回测版专用（backtest\GridEA_bt.mq5 定义 GRIDEA_BT 后包含本文件；实盘版不编译这一段）
+//==================================================================
+// 时间写成 10-22_08:38（统计行用空格分隔字段）
+string BtT(const datetime t)
+  {
+   if(t <= 0)
+      return "-";
+   MqlDateTime s;
+   TimeToStruct(t, s);
+   return StringFormat("%02d-%02d_%02d:%02d", s.mon, s.day, s.hour, s.min);
+  }
+
+// 每个 tick：浮动盈亏、最大浮亏、单日最大亏损（当天开始时的余额 - 当天最低净值，按服务器日）
+void BtOnTick()
+  {
+   double bal = AccountInfoDouble(ACCOUNT_BALANCE);
+   double eq  = AccountInfoDouble(ACCOUNT_EQUITY);
+   datetime now = TimeCurrent();
+   g_btLastFloat = eq - bal;
+   if(g_btLastFloat < g_btMinFloat)
+     {
+      g_btMinFloat  = g_btLastFloat;
+      g_btMinFloatT = now;
+     }
+   datetime day = ServerDay(now);
+   if(day != g_btDay)
+     {
+      g_btDay      = day;
+      g_btDayBal   = bal;
+      g_btDayMinEq = eq;
+     }
+   if(eq < g_btDayMinEq)
+      g_btDayMinEq = eq;
+   if(g_btDayBal - g_btDayMinEq > g_btMaxDayLoss)
+     {
+      g_btMaxDayLoss  = g_btDayBal - g_btDayMinEq;
+      g_btMaxDayLossD = day;
+     }
+  }
+
+void BtDeferStart(const int k)
+  {
+   if(g_btDeferOn[k])
+      return;
+   g_btDeferOn[k] = true;
+   g_btDeferT0[k] = TimeCurrent();
+   g_btDefers++;
+  }
+
+void BtDeferEnd(const int k)
+  {
+   if(!g_btDeferOn[k])
+      return;
+   g_btDeferOn[k] = false;
+   g_btDeferSec += (long)TimeCurrent() - (long)g_btDeferT0[k];
+  }
+
+void BtNoteStop(const int code)
+  {
+   for(int k = 0; k < MAX_LINES; k++)
+      BtDeferEnd(k);
+   int n = ArraySize(g_btStopT);
+   ArrayResize(g_btStopT, n + 1);
+   ArrayResize(g_btStopRs, n + 1);
+   g_btStopT[n]  = TimeCurrent();
+   g_btStopRs[n] = code;
+  }
+
+void BtNoteStart()
+  {
+   for(int k = 0; k < MAX_LINES; k++)
+      BtDeferEnd(k);
+   g_btStarts += StringFormat("%s%s_N%d_step%s_SL%s", (g_btStarts == "" ? "" : " "), BtT(TimeCurrent()),
+                              g_N, P(g_step), P(g_sl));
+  }
+
+// 模拟“开盘后重新加载 EA”：周五平仓（或周末 / 开盘前被拒绝）后，开盘进入交易时段就重新开网格
+void BtWeeklyRestart()
+  {
+   if(!g_tester || !InpBtWeeklyRestart || g_todo != 0)
+      return;
+   if(g_reason != RS_FRIDAY && g_reason != RS_FRIDAY_MISSED && g_reason != RS_REF_WEEKEND)
+      return;
+   datetime srv = TimeTradeServer();
+   if(InWeekendBlock(srv) || !InTradeSession(srv))
+      return;
+   g_btRestarts++;
+   PrintFormat("【回测】模拟开盘后重新加载 EA（第 %d 次），重新开网格", g_btRestarts);
+   BeginNewGrid(ST_STOPPED);
+  }
+
+// t 时刻之前最近一次停止的原因：区分 EA 的平仓属于周五平仓还是硬止损
+int BtStopAt(const datetime t)
+  {
+   int rs = RS_NONE;
+   for(int i = 0; i < ArraySize(g_btStopT); i++)
+      if(g_btStopT[i] <= t)
+         rs = g_btStopRs[i];
+   return rs;
+  }
+
+// 回测结束：从成交历史汇总，打印 BTSTAT / BTSTARTS / BTSTOPS 三行（compare_summary.py 解析）
+void BtReport()
+  {
+   if(!g_tester)
+      return;
+   HistorySelect(0, TimeCurrent() + 86400);
+   double realized = 0.0, endP = 0.0, swp = 0.0, com = 0.0;
+   double tpP = 0.0, slP = 0.0, friP = 0.0, eaP = 0.0;
+   int tpN = 0, slN = 0, friN = 0, eaN = 0, endN = 0;
+   datetime firstSl = 0;
+   int total = HistoryDealsTotal();
+   for(int i = 0; i < total; i++)
+     {
+      ulong d = HistoryDealGetTicket(i);
+      if(d == 0 || HistoryDealGetString(d, DEAL_SYMBOL) != _Symbol)
+         continue;
+      double pr = HistoryDealGetDouble(d, DEAL_PROFIT);
+      double sw = HistoryDealGetDouble(d, DEAL_SWAP);
+      double cm = HistoryDealGetDouble(d, DEAL_COMMISSION) + HistoryDealGetDouble(d, DEAL_FEE);
+      swp += sw;
+      com += cm;
+      // 测试器在结束时强制平掉的持仓单独算（= 期末浮动盈亏）
+      if(StringFind(HistoryDealGetString(d, DEAL_COMMENT), "end of test") >= 0)
+        {
+         endP += pr + sw + cm;
+         endN++;
+         continue;
+        }
+      realized += pr + sw + cm;
+      long entry = HistoryDealGetInteger(d, DEAL_ENTRY);
+      if(entry != DEAL_ENTRY_OUT && entry != DEAL_ENTRY_OUT_BY)
+         continue;
+      long rsn = HistoryDealGetInteger(d, DEAL_REASON);
+      datetime t = (datetime)HistoryDealGetInteger(d, DEAL_TIME);
+      if(rsn == DEAL_REASON_TP)
+        {
+         tpP += pr;
+         tpN++;
+        }
+      else
+         if(rsn == DEAL_REASON_SL || rsn == DEAL_REASON_SO)
+           {
+            slP += pr;
+            slN++;
+            if(firstSl == 0)
+               firstSl = t;
+           }
+         else
+           {
+            int rs = BtStopAt(t);
+            if(rs == RS_FRIDAY || rs == RS_FRIDAY_MISSED)
+              {
+               friP += pr;
+               friN++;
+              }
+            else
+              {
+               eaP += pr;
+               eaN++;
+              }
+           }
+     }
+   // OnDeinit 时如果持仓还没被测试器平掉，把它们的隔夜利息也算进合计
+   int openN = 0;
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+     {
+      ulong tk = PositionGetTicket(i);
+      if(tk == 0 || PositionGetString(POSITION_SYMBOL) != _Symbol)
+         continue;
+      swp += PositionGetDouble(POSITION_SWAP);
+      openN++;
+     }
+   PrintFormat("BTSTAT realized=%.2f tpN=%d tpP=%.2f slN=%d slP=%.2f firstSl=%s friN=%d friP=%.2f eaN=%d eaP=%.2f "
+               "swap=%.2f comm=%.2f endFloat=%.2f endN=%d endP=%.2f openN=%d minFloat=%.2f minFloatT=%s "
+               "maxDayLoss=%.2f maxDayLossD=%s defers=%d deferMin=%d restarts=%d",
+               realized, tpN, tpP, slN, slP, BtT(firstSl), friN, friP, eaN, eaP,
+               swp, com, g_btLastFloat, endN, endP, openN, g_btMinFloat, BtT(g_btMinFloatT),
+               g_btMaxDayLoss, BtT(g_btMaxDayLossD), g_btDefers, (int)(g_btDeferSec / 60), g_btRestarts);
+   Print("BTSTARTS ", (g_btStarts == "" ? "-" : g_btStarts));
+   string stops = "";
+   for(int i = 0; i < ArraySize(g_btStopT); i++)
+      stops += StringFormat("%s%s_RS%d", (i == 0 ? "" : " "), BtT(g_btStopT[i]), g_btStopRs[i]);
+   Print("BTSTOPS ", (stops == "" ? "-" : stops));
+  }
+#endif
 //+------------------------------------------------------------------+

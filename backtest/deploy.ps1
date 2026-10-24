@@ -1,18 +1,18 @@
-﻿# 把 UTF-8 源码转成 UTF-16 复制到 MT5 的 MQL5\Experts 下并编译，输出编译结果
-# 用法：.\deploy.ps1 -Source D:\git\manual_grid\GridEA.mq5 -TargetRel GridEA.mq5
+﻿# 把 UTF-8 源码转成 UTF-16 放进便携终端的 MQL5 目录，用该终端自己的 MetaEditor（便携模式）编译，输出编译结果
+# 用法：.\deploy.ps1 -Source ..\GridEA.mq5 -TargetRel GridEA.mq5 [-Kind Scripts] [-Root D:\MT5\FTMO_B]
 param(
   [Parameter(Mandatory = $true)] [string]$Source,
   [Parameter(Mandatory = $true)] [string]$TargetRel,
-  [string]$Kind = 'Experts'                           # Experts 或 Scripts
+  [string]$Kind = 'Experts',                          # Experts 或 Scripts
+  [string]$Root = 'D:\MT5\FTMO_A'                     # 便携终端所在文件夹（槽位）
 )
 $ErrorActionPreference = 'Stop'
-$experts = Join-Path $env:APPDATA "MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\$Kind"
-$dst = Join-Path $experts $TargetRel
+$dst = Join-Path $Root "MQL5\$Kind\$TargetRel"
 New-Item -ItemType Directory -Force (Split-Path $dst) | Out-Null
-$text = [System.IO.File]::ReadAllText($Source, [System.Text.Encoding]::UTF8)
+$text = [System.IO.File]::ReadAllText((Resolve-Path $Source).Path, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText($dst, $text, [System.Text.Encoding]::Unicode)
 $log = [System.IO.Path]::ChangeExtension($dst, '.compile.log')
 if (Test-Path $log) { Remove-Item $log -Force }
-Start-Process -FilePath 'C:\Program Files\MetaTrader 5\metaeditor64.exe' -ArgumentList ('/compile:"' + $dst + '"'), ('/log:"' + $log + '"') -Wait | Out-Null
+Start-Process -FilePath (Join-Path $Root 'MetaEditor64.exe') -ArgumentList '/portable', ('/compile:"' + $dst + '"'), ('/log:"' + $log + '"') -Wait | Out-Null
 Get-Content $log -Encoding Unicode | Where-Object { $_ -match 'Result|error|warning' }
 Remove-Item $log -Force
