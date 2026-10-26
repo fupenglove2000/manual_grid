@@ -1,0 +1,439 @@
+﻿CS	0	22:11:03.321	Startup	MetaTester 5 build 6230, 25 Sep 2026
+CS	0	22:11:03.322	Startup	Windows 11 build 26300, 16 x 11th Gen Intel Core i9-11900H @ 2.50GHz, AVX2, 2 / 15 Gb memory, 242 / 273 Gb disk, UAC, GMT+9
+CS	0	22:11:03.322	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	22:11:03.324	Startup	cloud network mode is off
+CS	0	22:11:03.324	Startup	initialization finished
+CS	0	22:11:03.634	127.0.0.1	login (build 6230)
+CS	0	22:11:03.644	Network	35364 bytes of account info loaded
+CS	0	22:11:03.644	Network	1478 bytes of tester parameters loaded
+CS	0	22:11:03.644	Network	13508 bytes of input parameters loaded
+CS	0	22:11:03.644	Network	929 bytes of symbols list loaded (166 symbols)
+CS	0	22:11:03.644	Tester	expert file added: Experts\TrendBT.ex5. 55529 bytes loaded
+CS	0	22:11:03.648	Tester	2496 Mb available, 31 blocks set for ticks generating
+CS	0	22:11:03.648	Tester	initial deposit 100000.00 USD, leverage 1:100
+CS	0	22:11:03.648	Tester	successfully initialized
+CS	0	22:11:03.648	Network	58 Kb of total initialization data received
+CS	0	22:11:03.648	Tester	11th Gen Intel Core i9-11900H @ 2.50GHz, 16064 MB
+CS	0	22:11:03.651	Symbols	XAUUSD: symbol to be synchronized
+CS	0	22:11:03.652	Symbols	XAUUSD: symbol synchronized, 3720 bytes of symbol info received
+CS	0	22:11:03.653	History	XAUUSD: load 27 bytes of history data to synchronize in 0:00:00.000
+CS	0	22:11:03.653	History	XAUUSD: history synchronized from 2014.01.02 to 2026.10.23
+CS	0	22:11:03.681	History	XAUUSD,H1: history cache allocated for 10793 bars and contains 9096 bars from 2025.01.02 01:00 to 2026.07.16 23:00
+CS	0	22:11:03.681	History	XAUUSD,H1: history begins from 2025.01.02 01:00
+CS	0	22:11:03.681	Tester	XAUUSD,H1 (FTMO-Server4): 1 minutes OHLC ticks generating
+CS	0	22:11:03.681	Tester	XAUUSD,H1: testing of Experts\TrendBT.ex5 from 2026.07.17 00:00 to 2026.10.24 00:00 started with inputs:
+CS	0	22:11:03.681	Tester	  ① 信号=
+CS	0	22:11:03.681	Tester	  InpEmaFast=20
+CS	0	22:11:03.681	Tester	  InpEmaSlow=50
+CS	0	22:11:03.681	Tester	  InpRsiLen=14
+CS	0	22:11:03.681	Tester	  InpRsiMaLen=14
+CS	0	22:11:03.681	Tester	  InpLongThr=55.0
+CS	0	22:11:03.681	Tester	  InpShortThr=45.0
+CS	0	22:11:03.681	Tester	  InpRunMin=2
+CS	0	22:11:03.681	Tester	  InpReqBody=true
+CS	0	22:11:03.681	Tester	  ② 止损止盈与仓位=
+CS	0	22:11:03.681	Tester	  InpRiskPct=1.0
+CS	0	22:11:03.681	Tester	  InpRR=2.0
+CS	0	22:11:03.681	Tester	  InpMaxRunBars=50
+CS	0	22:11:03.681	Tester	  InpStopInclSignal=true
+CS	0	22:11:03.681	Tester	  InpCommPerLot=0.0
+CS	0	22:11:03.681	Tester	  ③ 时段（日本时间，按信号K的开盘时间）=
+CS	0	22:11:03.681	Tester	  InpUseSession=true
+CS	0	22:11:03.681	Tester	  InpFirstBarJst=8
+CS	0	22:11:03.681	Tester	  InpLastBarJst=23
+CS	0	22:11:03.681	Tester	  InpServerMinusNy=7
+CS	0	22:11:03.681	Tester	  ④ 周五平仓=
+CS	0	22:11:03.681	Tester	  InpFridayClose=false
+CS	0	22:11:03.681	Tester	  InpFridayHourNy=16
+CS	0	22:11:03.681	Tester	  ⑤ 其他=
+CS	0	22:11:03.681	Tester	  InpMagic=20261026
+CS	0	22:11:03.681	Tester	  InpWriteFiles=true
+CS	0	22:11:03.686	TrendBT (XAUUSD,H1)	2026.07.17 00:00:00   TrendBT 开始：初始余额 100000.00，每笔风险 1000.00（1.00%），盈亏比 2.0
+CS	0	22:11:03.701	TrendBT (XAUUSD,H1)	2026.07.21 22:00:00   信号 做多｜信号K开盘 日本时间 2026.07.22 03:00｜时段外，不开仓
+CS	0	22:11:03.701	Trade	2026.07.22 04:00:00   market buy 0.46 XAUUSD sl: 4076.63 tp: 4140.95 (4097.57 / 4098.07 / 4097.57)
+CS	0	22:11:03.701	Trades	2026.07.22 04:00:00   deal #2 buy 0.46 XAUUSD at 4098.07 done (based on order #2)
+CS	0	22:11:03.701	Trade	2026.07.22 04:00:00   deal performed [#2 buy 0.46 XAUUSD at 4098.07]
+CS	0	22:11:03.701	Trade	2026.07.22 04:00:00   order performed buy 0.46 at 4098.07 [#2 buy 0.46 XAUUSD at 4098.07]
+CS	0	22:11:03.701	TrendBT (XAUUSD,H1)	2026.07.22 04:00:00   CTrade::OrderSend: market buy 0.46 XAUUSD sl: 4076.63 tp: 4140.95 [done at 4098.07]
+CS	0	22:11:03.701	TrendBT (XAUUSD,H1)	2026.07.22 04:00:00   信号 做多｜信号K开盘 日本时间 2026.07.22 09:00｜开仓 0.46 手 @ 4098.07，止损 4076.63，止盈 4140.95
+CS	0	22:11:03.702	Trade	2026.07.22 06:23:40   take profit triggered #2 buy 0.46 XAUUSD 4098.07 sl: 4076.63 tp: 4140.95 [#3 sell 0.46 XAUUSD at 4140.95]
+CS	0	22:11:03.702	Trades	2026.07.22 06:23:40   deal #3 sell 0.46 XAUUSD at 4140.95 done (based on order #3)
+CS	0	22:11:03.702	Trade	2026.07.22 06:23:40   deal performed [#3 sell 0.46 XAUUSD at 4140.95]
+CS	0	22:11:03.702	Trade	2026.07.22 06:23:40   order performed sell 0.46 at 4140.95 [#3 sell 0.46 XAUUSD at 4140.95]
+CS	0	22:11:03.702	TrendBT (XAUUSD,H1)	2026.07.23 21:00:00   信号 做空｜信号K开盘 日本时间 2026.07.24 02:00｜时段外，不开仓
+CS	0	22:11:03.702	Trade	2026.07.24 03:00:00   market sell 2.51 XAUUSD sl: 4051.06 tp: 4039.15 (4047.09 / 4047.59 / 4047.09)
+CS	0	22:11:03.702	Trades	2026.07.24 03:00:00   deal #4 sell 2.51 XAUUSD at 4047.09 done (based on order #4)
+CS	0	22:11:03.702	Trade	2026.07.24 03:00:00   deal performed [#4 sell 2.51 XAUUSD at 4047.09]
+CS	0	22:11:03.702	Trade	2026.07.24 03:00:00   order performed sell 2.51 at 4047.09 [#4 sell 2.51 XAUUSD at 4047.09]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.24 03:00:00   CTrade::OrderSend: market sell 2.51 XAUUSD sl: 4051.06 tp: 4039.15 [done at 4047.09]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.24 03:00:00   信号 做空｜信号K开盘 日本时间 2026.07.24 08:00｜开仓 2.51 手 @ 4047.09，止损 4051.06，止盈 4039.15
+CS	0	22:11:03.703	Trade	2026.07.24 05:47:40   take profit triggered #4 sell 2.51 XAUUSD 4047.09 sl: 4051.06 tp: 4039.15 [#5 buy 2.51 XAUUSD at 4039.15]
+CS	0	22:11:03.703	Trades	2026.07.24 05:47:40   deal #5 buy 2.51 XAUUSD at 4039.15 done (based on order #5)
+CS	0	22:11:03.703	Trade	2026.07.24 05:47:40   deal performed [#5 buy 2.51 XAUUSD at 4039.15]
+CS	0	22:11:03.703	Trade	2026.07.24 05:47:40   order performed buy 2.51 at 4039.15 [#5 buy 2.51 XAUUSD at 4039.15]
+CS	0	22:11:03.703	Trade	2026.07.24 09:00:00   market sell 0.39 XAUUSD sl: 4048.01 tp: 3972.77 (4022.93 / 4023.31 / 4022.93)
+CS	0	22:11:03.703	Trades	2026.07.24 09:00:00   deal #6 sell 0.39 XAUUSD at 4022.93 done (based on order #6)
+CS	0	22:11:03.703	Trade	2026.07.24 09:00:00   deal performed [#6 sell 0.39 XAUUSD at 4022.93]
+CS	0	22:11:03.703	Trade	2026.07.24 09:00:00   order performed sell 0.39 at 4022.93 [#6 sell 0.39 XAUUSD at 4022.93]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.24 09:00:00   CTrade::OrderSend: market sell 0.39 XAUUSD sl: 4048.01 tp: 3972.77 [done at 4022.93]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.24 09:00:00   信号 做空｜信号K开盘 日本时间 2026.07.24 14:00｜开仓 0.39 手 @ 4022.93，止损 4048.01，止盈 3972.77
+CS	0	22:11:03.703	Trade	2026.07.24 10:20:20   stop loss triggered #6 sell 0.39 XAUUSD 4022.93 sl: 4048.01 tp: 3972.77 [#7 buy 0.39 XAUUSD at 4048.01]
+CS	0	22:11:03.703	Trades	2026.07.24 10:20:20   deal #7 buy 0.39 XAUUSD at 4048.01 done (based on order #7)
+CS	0	22:11:03.703	Trade	2026.07.24 10:20:20   deal performed [#7 buy 0.39 XAUUSD at 4048.01]
+CS	0	22:11:03.703	Trade	2026.07.24 10:20:20   order performed buy 0.39 at 4048.01 [#7 buy 0.39 XAUUSD at 4048.01]
+CS	0	22:11:03.703	Trade	2026.07.27 09:00:00   market buy 1.1 XAUUSD sl: 4084.28 tp: 4111.49 (4092.95 / 4093.35 / 4092.95)
+CS	0	22:11:03.703	Trades	2026.07.27 09:00:00   deal #8 buy 1.1 XAUUSD at 4093.35 done (based on order #8)
+CS	0	22:11:03.703	Trade	2026.07.27 09:00:00   deal performed [#8 buy 1.1 XAUUSD at 4093.35]
+CS	0	22:11:03.703	Trade	2026.07.27 09:00:00   order performed buy 1.1 at 4093.35 [#8 buy 1.1 XAUUSD at 4093.35]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.27 09:00:00   CTrade::OrderSend: market buy 1.10 XAUUSD sl: 4084.28 tp: 4111.49 [done at 4093.35]
+CS	0	22:11:03.703	TrendBT (XAUUSD,H1)	2026.07.27 09:00:00   信号 做多｜信号K开盘 日本时间 2026.07.27 14:00｜开仓 1.10 手 @ 4093.35，止损 4084.28，止盈 4111.49
+CS	0	22:11:03.704	Trade	2026.07.27 15:19:40   stop loss triggered #8 buy 1.1 XAUUSD 4093.35 sl: 4084.28 tp: 4111.49 [#9 sell 1.1 XAUUSD at 4084.28]
+CS	0	22:11:03.704	Trades	2026.07.27 15:19:40   deal #9 sell 1.1 XAUUSD at 4084.28 done (based on order #9)
+CS	0	22:11:03.704	Trade	2026.07.27 15:19:40   deal performed [#9 sell 1.1 XAUUSD at 4084.28]
+CS	0	22:11:03.704	Trade	2026.07.27 15:19:40   order performed sell 1.1 at 4084.28 [#9 sell 1.1 XAUUSD at 4084.28]
+CS	0	22:11:03.704	Trade	2026.07.28 12:00:00   market sell 1.07 XAUUSD sl: 4055.04 tp: 4027.08 (4045.72 / 4046.13 / 4045.72)
+CS	0	22:11:03.704	Trades	2026.07.28 12:00:00   deal #10 sell 1.07 XAUUSD at 4045.72 done (based on order #10)
+CS	0	22:11:03.704	Trade	2026.07.28 12:00:00   deal performed [#10 sell 1.07 XAUUSD at 4045.72]
+CS	0	22:11:03.704	Trade	2026.07.28 12:00:00   order performed sell 1.07 at 4045.72 [#10 sell 1.07 XAUUSD at 4045.72]
+CS	0	22:11:03.704	TrendBT (XAUUSD,H1)	2026.07.28 12:00:00   CTrade::OrderSend: market sell 1.07 XAUUSD sl: 4055.04 tp: 4027.08 [done at 4045.72]
+CS	0	22:11:03.704	TrendBT (XAUUSD,H1)	2026.07.28 12:00:00   信号 做空｜信号K开盘 日本时间 2026.07.28 17:00｜开仓 1.07 手 @ 4045.72，止损 4055.04，止盈 4027.08
+CS	0	22:11:03.704	Trade	2026.07.28 12:57:40   take profit triggered #10 sell 1.07 XAUUSD 4045.72 sl: 4055.04 tp: 4027.08 [#11 buy 1.07 XAUUSD at 4027.08]
+CS	0	22:11:03.704	Trades	2026.07.28 12:57:40   deal #11 buy 1.07 XAUUSD at 4027.08 done (based on order #11)
+CS	0	22:11:03.704	Trade	2026.07.28 12:57:40   deal performed [#11 buy 1.07 XAUUSD at 4027.08]
+CS	0	22:11:03.704	Trade	2026.07.28 12:57:40   order performed buy 1.07 at 4027.08 [#11 buy 1.07 XAUUSD at 4027.08]
+CS	0	22:11:03.704	TrendBT (XAUUSD,H1)	2026.07.28 21:00:00   信号 做空｜信号K开盘 日本时间 2026.07.29 02:00｜时段外，不开仓
+CS	0	22:11:03.705	TrendBT (XAUUSD,H1)	2026.07.29 02:00:00   信号 做空｜信号K开盘 日本时间 2026.07.29 07:00｜时段外，不开仓
+CS	0	22:11:03.705	Trade	2026.07.29 12:00:00   market sell 1.04 XAUUSD sl: 4047.56 tp: 4018.76 (4037.96 / 4038.33 / 4037.96)
+CS	0	22:11:03.705	Trades	2026.07.29 12:00:00   deal #12 sell 1.04 XAUUSD at 4037.96 done (based on order #12)
+CS	0	22:11:03.705	Trade	2026.07.29 12:00:00   deal performed [#12 sell 1.04 XAUUSD at 4037.96]
+CS	0	22:11:03.705	Trade	2026.07.29 12:00:00   order performed sell 1.04 at 4037.96 [#12 sell 1.04 XAUUSD at 4037.96]
+CS	0	22:11:03.705	TrendBT (XAUUSD,H1)	2026.07.29 12:00:00   CTrade::OrderSend: market sell 1.04 XAUUSD sl: 4047.56 tp: 4018.76 [done at 4037.96]
+CS	0	22:11:03.705	TrendBT (XAUUSD,H1)	2026.07.29 12:00:00   信号 做空｜信号K开盘 日本时间 2026.07.29 17:00｜开仓 1.04 手 @ 4037.96，止损 4047.56，止盈 4018.76
+CS	0	22:11:03.705	Trade	2026.07.29 15:20:40   take profit triggered #12 sell 1.04 XAUUSD 4037.96 sl: 4047.56 tp: 4018.76 [#13 buy 1.04 XAUUSD at 4018.76]
+CS	0	22:11:03.705	Trades	2026.07.29 15:20:40   deal #13 buy 1.04 XAUUSD at 4018.76 done (based on order #13)
+CS	0	22:11:03.705	Trade	2026.07.29 15:20:40   deal performed [#13 buy 1.04 XAUUSD at 4018.76]
+CS	0	22:11:03.705	Trade	2026.07.29 15:20:40   order performed buy 1.04 at 4018.76 [#13 buy 1.04 XAUUSD at 4018.76]
+CS	0	22:11:03.706	TrendBT (XAUUSD,H1)	2026.07.30 23:00:00   信号 做多｜信号K开盘 日本时间 2026.07.31 04:00｜时段外，不开仓
+CS	0	22:11:03.706	Trade	2026.07.31 08:00:00   market buy 1.17 XAUUSD sl: 4071.90 tp: 4097.43 (4079.91 / 4080.41 / 4079.91)
+CS	0	22:11:03.706	Trades	2026.07.31 08:00:00   deal #14 buy 1.17 XAUUSD at 4080.41 done (based on order #14)
+CS	0	22:11:03.706	Trade	2026.07.31 08:00:00   deal performed [#14 buy 1.17 XAUUSD at 4080.41]
+CS	0	22:11:03.706	Trade	2026.07.31 08:00:00   order performed buy 1.17 at 4080.41 [#14 buy 1.17 XAUUSD at 4080.41]
+CS	0	22:11:03.706	TrendBT (XAUUSD,H1)	2026.07.31 08:00:00   CTrade::OrderSend: market buy 1.17 XAUUSD sl: 4071.90 tp: 4097.43 [done at 4080.41]
+CS	0	22:11:03.706	TrendBT (XAUUSD,H1)	2026.07.31 08:00:00   信号 做多｜信号K开盘 日本时间 2026.07.31 13:00｜开仓 1.17 手 @ 4080.41，止损 4071.90，止盈 4097.43
+CS	0	22:11:03.706	Trade	2026.07.31 10:30:40   stop loss triggered #14 buy 1.17 XAUUSD 4080.41 sl: 4071.90 tp: 4097.43 [#15 sell 1.17 XAUUSD at 4071.90]
+CS	0	22:11:03.706	Trades	2026.07.31 10:30:40   deal #15 sell 1.17 XAUUSD at 4071.90 done (based on order #15)
+CS	0	22:11:03.706	Trade	2026.07.31 10:30:40   deal performed [#15 sell 1.17 XAUUSD at 4071.90]
+CS	0	22:11:03.706	Trade	2026.07.31 10:30:40   order performed sell 1.17 at 4071.90 [#15 sell 1.17 XAUUSD at 4071.90]
+CS	0	22:11:03.708	TrendBT (XAUUSD,H1)	2026.08.04 20:00:00   信号 做多｜信号K开盘 日本时间 2026.08.05 01:00｜时段外，不开仓
+CS	0	22:11:03.708	Trade	2026.08.05 15:00:00   market buy 0.25 XAUUSD sl: 4150.06 tp: 4268.23 (4189.00 / 4189.45 / 4189.00)
+CS	0	22:11:03.708	Trades	2026.08.05 15:00:00   deal #16 buy 0.25 XAUUSD at 4189.45 done (based on order #16)
+CS	0	22:11:03.708	Trade	2026.08.05 15:00:00   deal performed [#16 buy 0.25 XAUUSD at 4189.45]
+CS	0	22:11:03.708	Trade	2026.08.05 15:00:00   order performed buy 0.25 at 4189.45 [#16 buy 0.25 XAUUSD at 4189.45]
+CS	0	22:11:03.708	TrendBT (XAUUSD,H1)	2026.08.05 15:00:00   CTrade::OrderSend: market buy 0.25 XAUUSD sl: 4150.06 tp: 4268.23 [done at 4189.45]
+CS	0	22:11:03.708	TrendBT (XAUUSD,H1)	2026.08.05 15:00:00   信号 做多｜信号K开盘 日本时间 2026.08.05 20:00｜开仓 0.25 手 @ 4189.45，止损 4150.06，止盈 4268.23
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.06 02:00:00   信号 做多｜信号K开盘 日本时间 2026.08.06 07:00｜时段外，不开仓
+CS	0	22:11:03.709	Trade	2026.08.06 02:35:40   take profit triggered #16 buy 0.25 XAUUSD 4189.45 sl: 4150.06 tp: 4268.23 [#17 sell 0.25 XAUUSD at 4268.23]
+CS	0	22:11:03.709	Trades	2026.08.06 02:35:40   deal #17 sell 0.25 XAUUSD at 4268.23 done (based on order #17)
+CS	0	22:11:03.709	Trade	2026.08.06 02:35:40   deal performed [#17 sell 0.25 XAUUSD at 4268.23]
+CS	0	22:11:03.709	Trade	2026.08.06 02:35:40   order performed sell 0.25 at 4268.23 [#17 sell 0.25 XAUUSD at 4268.23]
+CS	0	22:11:03.709	Trade	2026.08.06 09:00:00   market buy 0.48 XAUUSD sl: 4247.02 tp: 4308.85 (4267.19 / 4267.63 / 4267.19)
+CS	0	22:11:03.709	Trades	2026.08.06 09:00:00   deal #18 buy 0.48 XAUUSD at 4267.63 done (based on order #18)
+CS	0	22:11:03.709	Trade	2026.08.06 09:00:00   deal performed [#18 buy 0.48 XAUUSD at 4267.63]
+CS	0	22:11:03.709	Trade	2026.08.06 09:00:00   order performed buy 0.48 at 4267.63 [#18 buy 0.48 XAUUSD at 4267.63]
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.06 09:00:00   CTrade::OrderSend: market buy 0.48 XAUUSD sl: 4247.02 tp: 4308.85 [done at 4267.63]
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.06 09:00:00   信号 做多｜信号K开盘 日本时间 2026.08.06 14:00｜开仓 0.48 手 @ 4267.63，止损 4247.02，止盈 4308.85
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.06 12:00:00   信号 做多｜信号K开盘 日本时间 2026.08.06 17:00｜已有持仓，不开仓
+CS	0	22:11:03.709	Trade	2026.08.06 16:05:40   stop loss triggered #18 buy 0.48 XAUUSD 4267.63 sl: 4247.02 tp: 4308.85 [#19 sell 0.48 XAUUSD at 4247.02]
+CS	0	22:11:03.709	Trades	2026.08.06 16:05:40   deal #19 sell 0.48 XAUUSD at 4247.02 done (based on order #19)
+CS	0	22:11:03.709	Trade	2026.08.06 16:05:40   deal performed [#19 sell 0.48 XAUUSD at 4247.02]
+CS	0	22:11:03.709	Trade	2026.08.06 16:05:40   order performed sell 0.48 at 4247.02 [#19 sell 0.48 XAUUSD at 4247.02]
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.06 21:00:00   信号 做多｜信号K开盘 日本时间 2026.08.07 02:00｜时段外，不开仓
+CS	0	22:11:03.709	TrendBT (XAUUSD,H1)	2026.08.07 23:00:00   信号 做多｜信号K开盘 日本时间 2026.08.08 04:00｜时段外，不开仓
+CS	0	22:11:03.710	Trade	2026.08.10 08:00:00   market buy 0.37 XAUUSD sl: 4313.30 tp: 4392.92 (4339.38 / 4339.84 / 4339.38)
+CS	0	22:11:03.710	Trades	2026.08.10 08:00:00   deal #20 buy 0.37 XAUUSD at 4339.84 done (based on order #20)
+CS	0	22:11:03.710	Trade	2026.08.10 08:00:00   deal performed [#20 buy 0.37 XAUUSD at 4339.84]
+CS	0	22:11:03.710	Trade	2026.08.10 08:00:00   order performed buy 0.37 at 4339.84 [#20 buy 0.37 XAUUSD at 4339.84]
+CS	0	22:11:03.710	TrendBT (XAUUSD,H1)	2026.08.10 08:00:00   CTrade::OrderSend: market buy 0.37 XAUUSD sl: 4313.30 tp: 4392.92 [done at 4339.84]
+CS	0	22:11:03.710	TrendBT (XAUUSD,H1)	2026.08.10 08:00:00   信号 做多｜信号K开盘 日本时间 2026.08.10 13:00｜开仓 0.37 手 @ 4339.84，止损 4313.30，止盈 4392.92
+CS	0	22:11:03.710	Trade	2026.08.10 22:30:40   take profit triggered #20 buy 0.37 XAUUSD 4339.84 sl: 4313.30 tp: 4392.92 [#21 sell 0.37 XAUUSD at 4392.92]
+CS	0	22:11:03.710	Trades	2026.08.10 22:30:40   deal #21 sell 0.37 XAUUSD at 4392.92 done (based on order #21)
+CS	0	22:11:03.710	Trade	2026.08.10 22:30:40   deal performed [#21 sell 0.37 XAUUSD at 4392.92]
+CS	0	22:11:03.710	Trade	2026.08.10 22:30:40   order performed sell 0.37 at 4392.92 [#21 sell 0.37 XAUUSD at 4392.92]
+CS	0	22:11:03.711	Trade	2026.08.11 12:00:00   market buy 0.78 XAUUSD sl: 4356.65 tp: 4394.96 (4369.02 / 4369.42 / 4369.02)
+CS	0	22:11:03.711	Trades	2026.08.11 12:00:00   deal #22 buy 0.78 XAUUSD at 4369.42 done (based on order #22)
+CS	0	22:11:03.711	Trade	2026.08.11 12:00:00   deal performed [#22 buy 0.78 XAUUSD at 4369.42]
+CS	0	22:11:03.711	Trade	2026.08.11 12:00:00   order performed buy 0.78 at 4369.42 [#22 buy 0.78 XAUUSD at 4369.42]
+CS	0	22:11:03.711	TrendBT (XAUUSD,H1)	2026.08.11 12:00:00   CTrade::OrderSend: market buy 0.78 XAUUSD sl: 4356.65 tp: 4394.96 [done at 4369.42]
+CS	0	22:11:03.711	TrendBT (XAUUSD,H1)	2026.08.11 12:00:00   信号 做多｜信号K开盘 日本时间 2026.08.11 17:00｜开仓 0.78 手 @ 4369.42，止损 4356.65，止盈 4394.96
+CS	0	22:11:03.711	Trade	2026.08.11 15:08:40   take profit triggered #22 buy 0.78 XAUUSD 4369.42 sl: 4356.65 tp: 4394.96 [#23 sell 0.78 XAUUSD at 4394.96]
+CS	0	22:11:03.711	Trades	2026.08.11 15:08:40   deal #23 sell 0.78 XAUUSD at 4394.96 done (based on order #23)
+CS	0	22:11:03.711	Trade	2026.08.11 15:08:40   deal performed [#23 sell 0.78 XAUUSD at 4394.96]
+CS	0	22:11:03.711	Trade	2026.08.11 15:08:40   order performed sell 0.78 at 4394.96 [#23 sell 0.78 XAUUSD at 4394.96]
+CS	0	22:11:03.712	Trade	2026.08.12 16:00:00   market buy 0.17 XAUUSD sl: 4381.91 tp: 4549.19 (4437.22 / 4437.67 / 4437.22)
+CS	0	22:11:03.712	Trades	2026.08.12 16:00:00   deal #24 buy 0.17 XAUUSD at 4437.67 done (based on order #24)
+CS	0	22:11:03.712	Trade	2026.08.12 16:00:00   deal performed [#24 buy 0.17 XAUUSD at 4437.67]
+CS	0	22:11:03.712	Trade	2026.08.12 16:00:00   order performed buy 0.17 at 4437.67 [#24 buy 0.17 XAUUSD at 4437.67]
+CS	0	22:11:03.712	TrendBT (XAUUSD,H1)	2026.08.12 16:00:00   CTrade::OrderSend: market buy 0.17 XAUUSD sl: 4381.91 tp: 4549.19 [done at 4437.67]
+CS	0	22:11:03.712	TrendBT (XAUUSD,H1)	2026.08.12 16:00:00   信号 做多｜信号K开盘 日本时间 2026.08.12 21:00｜开仓 0.17 手 @ 4437.67，止损 4381.91，止盈 4549.19
+CS	0	22:11:03.712	TrendBT (XAUUSD,H1)	2026.08.12 22:00:00   信号 做多｜信号K开盘 日本时间 2026.08.13 03:00｜时段外，不开仓
+CS	0	22:11:03.712	TrendBT (XAUUSD,H1)	2026.08.13 03:00:00   信号 做多｜信号K开盘 日本时间 2026.08.13 08:00｜已有持仓，不开仓
+CS	0	22:11:03.712	Trade	2026.08.13 08:59:40   stop loss triggered #24 buy 0.17 XAUUSD 4437.67 sl: 4381.91 tp: 4549.19 [#25 sell 0.17 XAUUSD at 4381.91]
+CS	0	22:11:03.712	Trades	2026.08.13 08:59:40   deal #25 sell 0.17 XAUUSD at 4381.91 done (based on order #25)
+CS	0	22:11:03.712	Trade	2026.08.13 08:59:40   deal performed [#25 sell 0.17 XAUUSD at 4381.91]
+CS	0	22:11:03.712	Trade	2026.08.13 08:59:40   order performed sell 0.17 at 4381.91 [#25 sell 0.17 XAUUSD at 4381.91]
+CS	0	22:11:03.714	Trade	2026.08.17 17:00:00   market buy 0.31 XAUUSD sl: 4377.21 tp: 4472.91 (4408.66 / 4409.11 / 4408.66)
+CS	0	22:11:03.714	Trades	2026.08.17 17:00:00   deal #26 buy 0.31 XAUUSD at 4409.11 done (based on order #26)
+CS	0	22:11:03.714	Trade	2026.08.17 17:00:00   deal performed [#26 buy 0.31 XAUUSD at 4409.11]
+CS	0	22:11:03.714	Trade	2026.08.17 17:00:00   order performed buy 0.31 at 4409.11 [#26 buy 0.31 XAUUSD at 4409.11]
+CS	0	22:11:03.714	TrendBT (XAUUSD,H1)	2026.08.17 17:00:00   CTrade::OrderSend: market buy 0.31 XAUUSD sl: 4377.21 tp: 4472.91 [done at 4409.11]
+CS	0	22:11:03.714	TrendBT (XAUUSD,H1)	2026.08.17 17:00:00   信号 做多｜信号K开盘 日本时间 2026.08.17 22:00｜开仓 0.31 手 @ 4409.11，止损 4377.21，止盈 4472.91
+CS	0	22:11:03.714	TrendBT (XAUUSD,H1)	2026.08.17 23:00:00   信号 做多｜信号K开盘 日本时间 2026.08.18 04:00｜时段外，不开仓
+CS	0	22:11:03.715	Trade	2026.08.18 16:30:40   stop loss triggered #26 buy 0.31 XAUUSD 4409.11 sl: 4377.21 tp: 4472.91 [#27 sell 0.31 XAUUSD at 4377.21]
+CS	0	22:11:03.715	Trades	2026.08.18 16:30:40   deal #27 sell 0.31 XAUUSD at 4377.21 done (based on order #27)
+CS	0	22:11:03.715	Trade	2026.08.18 16:30:40   deal performed [#27 sell 0.31 XAUUSD at 4377.21]
+CS	0	22:11:03.715	Trade	2026.08.18 16:30:40   order performed sell 0.31 at 4377.21 [#27 sell 0.31 XAUUSD at 4377.21]
+CS	0	22:11:03.715	Trade	2026.08.19 08:00:00   market sell 0.73 XAUUSD sl: 4361.89 tp: 4320.91 (4348.23 / 4348.63 / 4348.23)
+CS	0	22:11:03.715	Trades	2026.08.19 08:00:00   deal #28 sell 0.73 XAUUSD at 4348.23 done (based on order #28)
+CS	0	22:11:03.715	Trade	2026.08.19 08:00:00   deal performed [#28 sell 0.73 XAUUSD at 4348.23]
+CS	0	22:11:03.715	Trade	2026.08.19 08:00:00   order performed sell 0.73 at 4348.23 [#28 sell 0.73 XAUUSD at 4348.23]
+CS	0	22:11:03.715	TrendBT (XAUUSD,H1)	2026.08.19 08:00:00   CTrade::OrderSend: market sell 0.73 XAUUSD sl: 4361.89 tp: 4320.91 [done at 4348.23]
+CS	0	22:11:03.715	TrendBT (XAUUSD,H1)	2026.08.19 08:00:00   信号 做空｜信号K开盘 日本时间 2026.08.19 13:00｜开仓 0.73 手 @ 4348.23，止损 4361.89，止盈 4320.91
+CS	0	22:11:03.716	Trade	2026.08.19 10:36:40   stop loss triggered #28 sell 0.73 XAUUSD 4348.23 sl: 4361.89 tp: 4320.91 [#29 buy 0.73 XAUUSD at 4361.89]
+CS	0	22:11:03.716	Trades	2026.08.19 10:36:40   deal #29 buy 0.73 XAUUSD at 4361.89 done (based on order #29)
+CS	0	22:11:03.716	Trade	2026.08.19 10:36:40   deal performed [#29 buy 0.73 XAUUSD at 4361.89]
+CS	0	22:11:03.716	Trade	2026.08.19 10:36:40   order performed buy 0.73 at 4361.89 [#29 buy 0.73 XAUUSD at 4361.89]
+CS	0	22:11:03.716	TrendBT (XAUUSD,H1)	2026.08.19 23:00:00   信号 做多｜信号K开盘 日本时间 2026.08.20 04:00｜时段外，不开仓
+CS	0	22:11:03.716	Trade	2026.08.20 17:00:00   market buy 0.31 XAUUSD sl: 4450.52 tp: 4544.78 (4481.51 / 4481.94 / 4481.51)
+CS	0	22:11:03.716	Trades	2026.08.20 17:00:00   deal #30 buy 0.31 XAUUSD at 4481.94 done (based on order #30)
+CS	0	22:11:03.716	Trade	2026.08.20 17:00:00   deal performed [#30 buy 0.31 XAUUSD at 4481.94]
+CS	0	22:11:03.716	Trade	2026.08.20 17:00:00   order performed buy 0.31 at 4481.94 [#30 buy 0.31 XAUUSD at 4481.94]
+CS	0	22:11:03.716	TrendBT (XAUUSD,H1)	2026.08.20 17:00:00   CTrade::OrderSend: market buy 0.31 XAUUSD sl: 4450.52 tp: 4544.78 [done at 4481.94]
+CS	0	22:11:03.716	TrendBT (XAUUSD,H1)	2026.08.20 17:00:00   信号 做多｜信号K开盘 日本时间 2026.08.20 22:00｜开仓 0.31 手 @ 4481.94，止损 4450.52，止盈 4544.78
+CS	0	22:11:03.716	TrendBT (XAUUSD,H1)	2026.08.20 22:00:00   信号 做多｜信号K开盘 日本时间 2026.08.21 03:00｜时段外，不开仓
+CS	0	22:11:03.717	TrendBT (XAUUSD,H1)	2026.08.21 03:00:00   信号 做多｜信号K开盘 日本时间 2026.08.21 08:00｜已有持仓，不开仓
+CS	0	22:11:03.717	Trade	2026.08.21 07:21:40   take profit triggered #30 buy 0.31 XAUUSD 4481.94 sl: 4450.52 tp: 4544.78 [#31 sell 0.31 XAUUSD at 4544.78]
+CS	0	22:11:03.717	Trades	2026.08.21 07:21:40   deal #31 sell 0.31 XAUUSD at 4544.78 done (based on order #31)
+CS	0	22:11:03.717	Trade	2026.08.21 07:21:40   deal performed [#31 sell 0.31 XAUUSD at 4544.78]
+CS	0	22:11:03.717	Trade	2026.08.21 07:21:40   order performed sell 0.31 at 4544.78 [#31 sell 0.31 XAUUSD at 4544.78]
+CS	0	22:11:03.717	Trade	2026.08.21 08:00:00   market buy 0.3 XAUUSD sl: 4508.56 tp: 4605.55 (4540.39 / 4540.89 / 4540.39)
+CS	0	22:11:03.717	Trades	2026.08.21 08:00:00   deal #32 buy 0.3 XAUUSD at 4540.89 done (based on order #32)
+CS	0	22:11:03.717	Trade	2026.08.21 08:00:00   deal performed [#32 buy 0.3 XAUUSD at 4540.89]
+CS	0	22:11:03.717	Trade	2026.08.21 08:00:00   order performed buy 0.3 at 4540.89 [#32 buy 0.3 XAUUSD at 4540.89]
+CS	0	22:11:03.717	TrendBT (XAUUSD,H1)	2026.08.21 08:00:00   CTrade::OrderSend: market buy 0.30 XAUUSD sl: 4508.56 tp: 4605.55 [done at 4540.89]
+CS	0	22:11:03.717	TrendBT (XAUUSD,H1)	2026.08.21 08:00:00   信号 做多｜信号K开盘 日本时间 2026.08.21 13:00｜开仓 0.30 手 @ 4540.89，止损 4508.56，止盈 4605.55
+CS	0	22:11:03.717	Trade	2026.08.21 18:25:20   take profit triggered #32 buy 0.3 XAUUSD 4540.89 sl: 4508.56 tp: 4605.55 [#33 sell 0.3 XAUUSD at 4605.55]
+CS	0	22:11:03.717	Trades	2026.08.21 18:25:20   deal #33 sell 0.3 XAUUSD at 4605.55 done (based on order #33)
+CS	0	22:11:03.717	Trade	2026.08.21 18:25:20   deal performed [#33 sell 0.3 XAUUSD at 4605.55]
+CS	0	22:11:03.717	Trade	2026.08.21 18:25:20   order performed sell 0.3 at 4605.55 [#33 sell 0.3 XAUUSD at 4605.55]
+CS	0	22:11:03.718	TrendBT (XAUUSD,H1)	2026.08.24 23:00:00   信号 做多｜信号K开盘 日本时间 2026.08.25 04:00｜时段外，不开仓
+CS	0	22:11:03.718	Trade	2026.08.25 09:00:00   market buy 0.36 XAUUSD sl: 4616.00 tp: 4697.90 (4642.93 / 4643.30 / 4642.93)
+CS	0	22:11:03.718	Trades	2026.08.25 09:00:00   deal #34 buy 0.36 XAUUSD at 4643.30 done (based on order #34)
+CS	0	22:11:03.718	Trade	2026.08.25 09:00:00   deal performed [#34 buy 0.36 XAUUSD at 4643.30]
+CS	0	22:11:03.718	Trade	2026.08.25 09:00:00   order performed buy 0.36 at 4643.30 [#34 buy 0.36 XAUUSD at 4643.30]
+CS	0	22:11:03.718	TrendBT (XAUUSD,H1)	2026.08.25 09:00:00   CTrade::OrderSend: market buy 0.36 XAUUSD sl: 4616.00 tp: 4697.90 [done at 4643.30]
+CS	0	22:11:03.718	TrendBT (XAUUSD,H1)	2026.08.25 09:00:00   信号 做多｜信号K开盘 日本时间 2026.08.25 14:00｜开仓 0.36 手 @ 4643.30，止损 4616.00，止盈 4697.90
+CS	0	22:11:03.718	Trade	2026.08.25 16:23:40   stop loss triggered #34 buy 0.36 XAUUSD 4643.30 sl: 4616.00 tp: 4697.90 [#35 sell 0.36 XAUUSD at 4616.00]
+CS	0	22:11:03.718	Trades	2026.08.25 16:23:40   deal #35 sell 0.36 XAUUSD at 4616.00 done (based on order #35)
+CS	0	22:11:03.718	Trade	2026.08.25 16:23:40   deal performed [#35 sell 0.36 XAUUSD at 4616.00]
+CS	0	22:11:03.718	Trade	2026.08.25 16:23:40   order performed sell 0.36 at 4616.00 [#35 sell 0.36 XAUUSD at 4616.00]
+CS	0	22:11:03.720	Trade	2026.08.27 04:00:00   market sell 0.45 XAUUSD sl: 4626.93 tp: 4560.84 (4604.90 / 4605.40 / 4604.90)
+CS	0	22:11:03.720	Trades	2026.08.27 04:00:00   deal #36 sell 0.45 XAUUSD at 4604.90 done (based on order #36)
+CS	0	22:11:03.720	Trade	2026.08.27 04:00:00   deal performed [#36 sell 0.45 XAUUSD at 4604.90]
+CS	0	22:11:03.720	Trade	2026.08.27 04:00:00   order performed sell 0.45 at 4604.90 [#36 sell 0.45 XAUUSD at 4604.90]
+CS	0	22:11:03.720	TrendBT (XAUUSD,H1)	2026.08.27 04:00:00   CTrade::OrderSend: market sell 0.45 XAUUSD sl: 4626.93 tp: 4560.84 [done at 4604.90]
+CS	0	22:11:03.720	TrendBT (XAUUSD,H1)	2026.08.27 04:00:00   信号 做空｜信号K开盘 日本时间 2026.08.27 09:00｜开仓 0.45 手 @ 4604.90，止损 4626.93，止盈 4560.84
+CS	0	22:11:03.720	Trade	2026.08.27 04:37:40   stop loss triggered #36 sell 0.45 XAUUSD 4604.90 sl: 4626.93 tp: 4560.84 [#37 buy 0.45 XAUUSD at 4626.93]
+CS	0	22:11:03.720	Trades	2026.08.27 04:37:40   deal #37 buy 0.45 XAUUSD at 4626.93 done (based on order #37)
+CS	0	22:11:03.720	Trade	2026.08.27 04:37:40   deal performed [#37 buy 0.45 XAUUSD at 4626.93]
+CS	0	22:11:03.720	Trade	2026.08.27 04:37:40   order performed buy 0.45 at 4626.93 [#37 buy 0.45 XAUUSD at 4626.93]
+CS	0	22:11:03.720	Trade	2026.08.27 08:00:00   market sell 0.41 XAUUSD sl: 4642.91 tp: 4569.98 (4618.60 / 4619.10 / 4618.60)
+CS	0	22:11:03.720	Trades	2026.08.27 08:00:00   deal #38 sell 0.41 XAUUSD at 4618.60 done (based on order #38)
+CS	0	22:11:03.720	Trade	2026.08.27 08:00:00   deal performed [#38 sell 0.41 XAUUSD at 4618.60]
+CS	0	22:11:03.720	Trade	2026.08.27 08:00:00   order performed sell 0.41 at 4618.60 [#38 sell 0.41 XAUUSD at 4618.60]
+CS	0	22:11:03.720	TrendBT (XAUUSD,H1)	2026.08.27 08:00:00   CTrade::OrderSend: market sell 0.41 XAUUSD sl: 4642.91 tp: 4569.98 [done at 4618.60]
+CS	0	22:11:03.720	TrendBT (XAUUSD,H1)	2026.08.27 08:00:00   信号 做空｜信号K开盘 日本时间 2026.08.27 13:00｜开仓 0.41 手 @ 4618.60，止损 4642.91，止盈 4569.98
+CS	0	22:11:03.720	Trade	2026.08.27 13:03:40   take profit triggered #38 sell 0.41 XAUUSD 4618.60 sl: 4642.91 tp: 4569.98 [#39 buy 0.41 XAUUSD at 4569.98]
+CS	0	22:11:03.720	Trades	2026.08.27 13:03:40   deal #39 buy 0.41 XAUUSD at 4569.98 done (based on order #39)
+CS	0	22:11:03.720	Trade	2026.08.27 13:03:40   deal performed [#39 buy 0.41 XAUUSD at 4569.98]
+CS	0	22:11:03.720	Trade	2026.08.27 13:03:40   order performed buy 0.41 at 4569.98 [#39 buy 0.41 XAUUSD at 4569.98]
+CS	0	22:11:03.721	Trade	2026.08.31 16:00:00   market sell 0.35 XAUUSD sl: 4463.92 tp: 4379.05 (4435.63 / 4436.08 / 4435.63)
+CS	0	22:11:03.721	Trades	2026.08.31 16:00:00   deal #40 sell 0.35 XAUUSD at 4435.63 done (based on order #40)
+CS	0	22:11:03.721	Trade	2026.08.31 16:00:00   deal performed [#40 sell 0.35 XAUUSD at 4435.63]
+CS	0	22:11:03.721	Trade	2026.08.31 16:00:00   order performed sell 0.35 at 4435.63 [#40 sell 0.35 XAUUSD at 4435.63]
+CS	0	22:11:03.721	TrendBT (XAUUSD,H1)	2026.08.31 16:00:00   CTrade::OrderSend: market sell 0.35 XAUUSD sl: 4463.92 tp: 4379.05 [done at 4435.63]
+CS	0	22:11:03.721	TrendBT (XAUUSD,H1)	2026.08.31 16:00:00   信号 做空｜信号K开盘 日本时间 2026.08.31 21:00｜开仓 0.35 手 @ 4435.63，止损 4463.92，止盈 4379.05
+CS	0	22:11:03.722	Trade	2026.09.01 11:30:40   take profit triggered #40 sell 0.35 XAUUSD 4435.63 sl: 4463.92 tp: 4379.05 [#41 buy 0.35 XAUUSD at 4379.05]
+CS	0	22:11:03.722	Trades	2026.09.01 11:30:40   deal #41 buy 0.35 XAUUSD at 4379.05 done (based on order #41)
+CS	0	22:11:03.722	Trade	2026.09.01 11:30:40   deal performed [#41 buy 0.35 XAUUSD at 4379.05]
+CS	0	22:11:03.722	Trade	2026.09.01 11:30:40   order performed buy 0.35 at 4379.05 [#41 buy 0.35 XAUUSD at 4379.05]
+CS	0	22:11:03.722	Trade	2026.09.01 16:00:00   market sell 0.32 XAUUSD sl: 4387.02 tp: 4294.32 (4356.12 / 4356.57 / 4356.12)
+CS	0	22:11:03.722	Trades	2026.09.01 16:00:00   deal #42 sell 0.32 XAUUSD at 4356.12 done (based on order #42)
+CS	0	22:11:03.722	Trade	2026.09.01 16:00:00   deal performed [#42 sell 0.32 XAUUSD at 4356.12]
+CS	0	22:11:03.722	Trade	2026.09.01 16:00:00   order performed sell 0.32 at 4356.12 [#42 sell 0.32 XAUUSD at 4356.12]
+CS	0	22:11:03.722	TrendBT (XAUUSD,H1)	2026.09.01 16:00:00   CTrade::OrderSend: market sell 0.32 XAUUSD sl: 4387.02 tp: 4294.32 [done at 4356.12]
+CS	0	22:11:03.722	TrendBT (XAUUSD,H1)	2026.09.01 16:00:00   信号 做空｜信号K开盘 日本时间 2026.09.01 21:00｜开仓 0.32 手 @ 4356.12，止损 4387.02，止盈 4294.32
+CS	0	22:11:03.723	TrendBT (XAUUSD,H1)	2026.09.01 20:00:00   信号 做空｜信号K开盘 日本时间 2026.09.02 01:00｜时段外，不开仓
+CS	0	22:11:03.723	TrendBT (XAUUSD,H1)	2026.09.02 03:00:00   信号 做空｜信号K开盘 日本时间 2026.09.02 08:00｜已有持仓，不开仓
+CS	0	22:11:03.723	Trade	2026.09.02 04:52:40   take profit triggered #42 sell 0.32 XAUUSD 4356.12 sl: 4387.02 tp: 4294.32 [#43 buy 0.32 XAUUSD at 4294.32]
+CS	0	22:11:03.723	Trades	2026.09.02 04:52:40   deal #43 buy 0.32 XAUUSD at 4294.32 done (based on order #43)
+CS	0	22:11:03.723	Trade	2026.09.02 04:52:40   deal performed [#43 buy 0.32 XAUUSD at 4294.32]
+CS	0	22:11:03.723	Trade	2026.09.02 04:52:40   order performed buy 0.32 at 4294.32 [#43 buy 0.32 XAUUSD at 4294.32]
+CS	0	22:11:03.723	Trade	2026.09.02 12:00:00   market sell 0.53 XAUUSD sl: 4331.45 tp: 4275.14 (4312.68 / 4313.05 / 4312.68)
+CS	0	22:11:03.723	Trades	2026.09.02 12:00:00   deal #44 sell 0.53 XAUUSD at 4312.68 done (based on order #44)
+CS	0	22:11:03.723	Trade	2026.09.02 12:00:00   deal performed [#44 sell 0.53 XAUUSD at 4312.68]
+CS	0	22:11:03.723	Trade	2026.09.02 12:00:00   order performed sell 0.53 at 4312.68 [#44 sell 0.53 XAUUSD at 4312.68]
+CS	0	22:11:03.723	TrendBT (XAUUSD,H1)	2026.09.02 12:00:00   CTrade::OrderSend: market sell 0.53 XAUUSD sl: 4331.45 tp: 4275.14 [done at 4312.68]
+CS	0	22:11:03.723	TrendBT (XAUUSD,H1)	2026.09.02 12:00:00   信号 做空｜信号K开盘 日本时间 2026.09.02 17:00｜开仓 0.53 手 @ 4312.68，止损 4331.45，止盈 4275.14
+CS	0	22:11:03.723	Trade	2026.09.02 14:35:40   stop loss triggered #44 sell 0.53 XAUUSD 4312.68 sl: 4331.45 tp: 4275.14 [#45 buy 0.53 XAUUSD at 4331.45]
+CS	0	22:11:03.723	Trades	2026.09.02 14:35:40   deal #45 buy 0.53 XAUUSD at 4331.45 done (based on order #45)
+CS	0	22:11:03.723	Trade	2026.09.02 14:35:40   deal performed [#45 buy 0.53 XAUUSD at 4331.45]
+CS	0	22:11:03.723	Trade	2026.09.02 14:35:40   order performed buy 0.53 at 4331.45 [#45 buy 0.53 XAUUSD at 4331.45]
+CS	0	22:11:03.723	TrendBT (XAUUSD,H1)	2026.09.02 19:00:00   信号 做空｜信号K开盘 日本时间 2026.09.03 00:00｜时段外，不开仓
+CS	0	22:11:03.724	Trade	2026.09.03 12:00:00   market buy 0.6 XAUUSD sl: 4418.68 tp: 4468.24 (4434.80 / 4435.20 / 4434.80)
+CS	0	22:11:03.724	Trades	2026.09.03 12:00:00   deal #46 buy 0.6 XAUUSD at 4435.20 done (based on order #46)
+CS	0	22:11:03.724	Trade	2026.09.03 12:00:00   deal performed [#46 buy 0.6 XAUUSD at 4435.20]
+CS	0	22:11:03.724	Trade	2026.09.03 12:00:00   order performed buy 0.6 at 4435.20 [#46 buy 0.6 XAUUSD at 4435.20]
+CS	0	22:11:03.724	TrendBT (XAUUSD,H1)	2026.09.03 12:00:00   CTrade::OrderSend: market buy 0.60 XAUUSD sl: 4418.68 tp: 4468.24 [done at 4435.20]
+CS	0	22:11:03.724	TrendBT (XAUUSD,H1)	2026.09.03 12:00:00   信号 做多｜信号K开盘 日本时间 2026.09.03 17:00｜开仓 0.60 手 @ 4435.20，止损 4418.68，止盈 4468.24
+CS	0	22:11:03.724	TrendBT (XAUUSD,H1)	2026.09.03 15:00:00   信号 做多｜信号K开盘 日本时间 2026.09.03 20:00｜已有持仓，不开仓
+CS	0	22:11:03.724	Trade	2026.09.03 15:32:20   take profit triggered #46 buy 0.6 XAUUSD 4435.20 sl: 4418.68 tp: 4468.24 [#47 sell 0.6 XAUUSD at 4468.24]
+CS	0	22:11:03.724	Trades	2026.09.03 15:32:20   deal #47 sell 0.6 XAUUSD at 4468.24 done (based on order #47)
+CS	0	22:11:03.724	Trade	2026.09.03 15:32:20   deal performed [#47 sell 0.6 XAUUSD at 4468.24]
+CS	0	22:11:03.724	Trade	2026.09.03 15:32:20   order performed sell 0.6 at 4468.24 [#47 sell 0.6 XAUUSD at 4468.24]
+CS	0	22:11:03.725	TrendBT (XAUUSD,H1)	2026.09.07 21:00:00   信号 做空｜信号K开盘 日本时间 2026.09.08 02:00｜时段外，不开仓
+CS	0	22:11:03.727	Trade	2026.09.11 11:00:00   market sell 0.62 XAUUSD sl: 4360.80 tp: 4312.74 (4344.78 / 4345.16 / 4344.78)
+CS	0	22:11:03.727	Trades	2026.09.11 11:00:00   deal #48 sell 0.62 XAUUSD at 4344.78 done (based on order #48)
+CS	0	22:11:03.727	Trade	2026.09.11 11:00:00   deal performed [#48 sell 0.62 XAUUSD at 4344.78]
+CS	0	22:11:03.727	Trade	2026.09.11 11:00:00   order performed sell 0.62 at 4344.78 [#48 sell 0.62 XAUUSD at 4344.78]
+CS	0	22:11:03.727	TrendBT (XAUUSD,H1)	2026.09.11 11:00:00   CTrade::OrderSend: market sell 0.62 XAUUSD sl: 4360.80 tp: 4312.74 [done at 4344.78]
+CS	0	22:11:03.727	TrendBT (XAUUSD,H1)	2026.09.11 11:00:00   信号 做空｜信号K开盘 日本时间 2026.09.11 16:00｜开仓 0.62 手 @ 4344.78，止损 4360.80，止盈 4312.74
+CS	0	22:11:03.727	Trade	2026.09.11 15:30:40   take profit triggered #48 sell 0.62 XAUUSD 4344.78 sl: 4360.80 tp: 4312.74 [#49 buy 0.62 XAUUSD at 4312.74]
+CS	0	22:11:03.727	Trades	2026.09.11 15:30:40   deal #49 buy 0.62 XAUUSD at 4312.74 done (based on order #49)
+CS	0	22:11:03.727	Trade	2026.09.11 15:30:40   deal performed [#49 buy 0.62 XAUUSD at 4312.74]
+CS	0	22:11:03.727	Trade	2026.09.11 15:30:40   order performed buy 0.62 at 4312.74 [#49 buy 0.62 XAUUSD at 4312.74]
+CS	0	22:11:03.728	TrendBT (XAUUSD,H1)	2026.09.14 22:00:00   信号 做空｜信号K开盘 日本时间 2026.09.15 03:00｜时段外，不开仓
+CS	0	22:11:03.728	Trade	2026.09.15 07:00:00   market sell 0.71 XAUUSD sl: 4317.21 tp: 4275.48 (4303.30 / 4303.70 / 4303.30)
+CS	0	22:11:03.728	Trades	2026.09.15 07:00:00   deal #50 sell 0.71 XAUUSD at 4303.30 done (based on order #50)
+CS	0	22:11:03.728	Trade	2026.09.15 07:00:00   deal performed [#50 sell 0.71 XAUUSD at 4303.30]
+CS	0	22:11:03.728	Trade	2026.09.15 07:00:00   order performed sell 0.71 at 4303.30 [#50 sell 0.71 XAUUSD at 4303.30]
+CS	0	22:11:03.728	TrendBT (XAUUSD,H1)	2026.09.15 07:00:00   CTrade::OrderSend: market sell 0.71 XAUUSD sl: 4317.21 tp: 4275.48 [done at 4303.30]
+CS	0	22:11:03.728	TrendBT (XAUUSD,H1)	2026.09.15 07:00:00   信号 做空｜信号K开盘 日本时间 2026.09.15 12:00｜开仓 0.71 手 @ 4303.30，止损 4317.21，止盈 4275.48
+CS	0	22:11:03.728	Trade	2026.09.15 11:00:40   take profit triggered #50 sell 0.71 XAUUSD 4303.30 sl: 4317.21 tp: 4275.48 [#51 buy 0.71 XAUUSD at 4275.48]
+CS	0	22:11:03.728	Trades	2026.09.15 11:00:40   deal #51 buy 0.71 XAUUSD at 4275.48 done (based on order #51)
+CS	0	22:11:03.728	Trade	2026.09.15 11:00:40   deal performed [#51 buy 0.71 XAUUSD at 4275.48]
+CS	0	22:11:03.728	Trade	2026.09.15 11:00:40   order performed buy 0.71 at 4275.48 [#51 buy 0.71 XAUUSD at 4275.48]
+CS	0	22:11:03.730	TrendBT (XAUUSD,H1)	2026.09.18 20:00:00   信号 做多｜信号K开盘 日本时间 2026.09.19 01:00｜时段外，不开仓
+CS	0	22:11:03.732	Trade	2026.09.24 09:00:00   market sell 0.56 XAUUSD sl: 4296.76 tp: 4243.30 (4278.94 / 4279.37 / 4278.94)
+CS	0	22:11:03.732	Trades	2026.09.24 09:00:00   deal #52 sell 0.56 XAUUSD at 4278.94 done (based on order #52)
+CS	0	22:11:03.732	Trade	2026.09.24 09:00:00   deal performed [#52 sell 0.56 XAUUSD at 4278.94]
+CS	0	22:11:03.732	Trade	2026.09.24 09:00:00   order performed sell 0.56 at 4278.94 [#52 sell 0.56 XAUUSD at 4278.94]
+CS	0	22:11:03.732	TrendBT (XAUUSD,H1)	2026.09.24 09:00:00   CTrade::OrderSend: market sell 0.56 XAUUSD sl: 4296.76 tp: 4243.30 [done at 4278.94]
+CS	0	22:11:03.732	TrendBT (XAUUSD,H1)	2026.09.24 09:00:00   信号 做空｜信号K开盘 日本时间 2026.09.24 14:00｜开仓 0.56 手 @ 4278.94，止损 4296.76，止盈 4243.30
+CS	0	22:11:03.732	TrendBT (XAUUSD,H1)	2026.09.24 18:00:00   信号 做空｜信号K开盘 日本时间 2026.09.24 23:00｜已有持仓，不开仓
+CS	0	22:11:03.733	Trade	2026.09.25 11:46:40   stop loss triggered #52 sell 0.56 XAUUSD 4278.94 sl: 4296.76 tp: 4243.30 [#53 buy 0.56 XAUUSD at 4296.76]
+CS	0	22:11:03.733	Trades	2026.09.25 11:46:40   deal #53 buy 0.56 XAUUSD at 4296.76 done (based on order #53)
+CS	0	22:11:03.733	Trade	2026.09.25 11:46:40   deal performed [#53 buy 0.56 XAUUSD at 4296.76]
+CS	0	22:11:03.733	Trade	2026.09.25 11:46:40   order performed buy 0.56 at 4296.76 [#53 buy 0.56 XAUUSD at 4296.76]
+CS	0	22:11:03.734	TrendBT (XAUUSD,H1)	2026.09.28 23:00:00   信号 做空｜信号K开盘 日本时间 2026.09.29 04:00｜时段外，不开仓
+CS	0	22:11:03.734	Trade	2026.09.29 04:00:00   market sell 0.87 XAUUSD sl: 4128.86 tp: 4094.57 (4117.43 / 4117.89 / 4117.43)
+CS	0	22:11:03.734	Trades	2026.09.29 04:00:00   deal #54 sell 0.87 XAUUSD at 4117.43 done (based on order #54)
+CS	0	22:11:03.734	Trade	2026.09.29 04:00:00   deal performed [#54 sell 0.87 XAUUSD at 4117.43]
+CS	0	22:11:03.734	Trade	2026.09.29 04:00:00   order performed sell 0.87 at 4117.43 [#54 sell 0.87 XAUUSD at 4117.43]
+CS	0	22:11:03.734	TrendBT (XAUUSD,H1)	2026.09.29 04:00:00   CTrade::OrderSend: market sell 0.87 XAUUSD sl: 4128.86 tp: 4094.57 [done at 4117.43]
+CS	0	22:11:03.734	TrendBT (XAUUSD,H1)	2026.09.29 04:00:00   信号 做空｜信号K开盘 日本时间 2026.09.29 09:00｜开仓 0.87 手 @ 4117.43，止损 4128.86，止盈 4094.57
+CS	0	22:11:03.734	Trade	2026.09.29 04:21:40   stop loss triggered #54 sell 0.87 XAUUSD 4117.43 sl: 4128.86 tp: 4094.57 [#55 buy 0.87 XAUUSD at 4128.86]
+CS	0	22:11:03.734	Trades	2026.09.29 04:21:40   deal #55 buy 0.87 XAUUSD at 4128.86 done (based on order #55)
+CS	0	22:11:03.734	Trade	2026.09.29 04:21:40   deal performed [#55 buy 0.87 XAUUSD at 4128.86]
+CS	0	22:11:03.734	Trade	2026.09.29 04:21:40   order performed buy 0.87 at 4128.86 [#55 buy 0.87 XAUUSD at 4128.86]
+CS	0	22:11:03.734	Trade	2026.09.29 08:00:00   market sell 0.73 XAUUSD sl: 4140.21 tp: 4099.26 (4126.56 / 4127.01 / 4126.56)
+CS	0	22:11:03.734	Trades	2026.09.29 08:00:00   deal #56 sell 0.73 XAUUSD at 4126.56 done (based on order #56)
+CS	0	22:11:03.734	Trade	2026.09.29 08:00:00   deal performed [#56 sell 0.73 XAUUSD at 4126.56]
+CS	0	22:11:03.734	Trade	2026.09.29 08:00:00   order performed sell 0.73 at 4126.56 [#56 sell 0.73 XAUUSD at 4126.56]
+CS	0	22:11:03.734	TrendBT (XAUUSD,H1)	2026.09.29 08:00:00   CTrade::OrderSend: market sell 0.73 XAUUSD sl: 4140.21 tp: 4099.26 [done at 4126.56]
+CS	0	22:11:03.734	TrendBT (XAUUSD,H1)	2026.09.29 08:00:00   信号 做空｜信号K开盘 日本时间 2026.09.29 13:00｜开仓 0.73 手 @ 4126.56，止损 4140.21，止盈 4099.26
+CS	0	22:11:03.734	Trade	2026.09.29 08:44:40   stop loss triggered #56 sell 0.73 XAUUSD 4126.56 sl: 4140.21 tp: 4099.26 [#57 buy 0.73 XAUUSD at 4140.21]
+CS	0	22:11:03.734	Trades	2026.09.29 08:44:40   deal #57 buy 0.73 XAUUSD at 4140.21 done (based on order #57)
+CS	0	22:11:03.734	Trade	2026.09.29 08:44:40   deal performed [#57 buy 0.73 XAUUSD at 4140.21]
+CS	0	22:11:03.734	Trade	2026.09.29 08:44:40   order performed buy 0.73 at 4140.21 [#57 buy 0.73 XAUUSD at 4140.21]
+CS	0	22:11:03.740	TrendBT (XAUUSD,H1)	2026.10.15 21:00:00   信号 做多｜信号K开盘 日本时间 2026.10.16 02:00｜时段外，不开仓
+CS	0	22:11:03.740	Trade	2026.10.16 17:00:00   market buy 0.32 XAUUSD sl: 4154.69 tp: 4246.73 (4185.02 / 4185.37 / 4185.02)
+CS	0	22:11:03.740	Trades	2026.10.16 17:00:00   deal #58 buy 0.32 XAUUSD at 4185.37 done (based on order #58)
+CS	0	22:11:03.740	Trade	2026.10.16 17:00:00   deal performed [#58 buy 0.32 XAUUSD at 4185.37]
+CS	0	22:11:03.740	Trade	2026.10.16 17:00:00   order performed buy 0.32 at 4185.37 [#58 buy 0.32 XAUUSD at 4185.37]
+CS	0	22:11:03.740	TrendBT (XAUUSD,H1)	2026.10.16 17:00:00   CTrade::OrderSend: market buy 0.32 XAUUSD sl: 4154.69 tp: 4246.73 [done at 4185.37]
+CS	0	22:11:03.741	TrendBT (XAUUSD,H1)	2026.10.16 17:00:00   信号 做多｜信号K开盘 日本时间 2026.10.16 22:00｜开仓 0.32 手 @ 4185.37，止损 4154.69，止盈 4246.73
+CS	0	22:11:03.741	TrendBT (XAUUSD,H1)	2026.10.16 23:00:00   信号 做多｜信号K开盘 日本时间 2026.10.17 04:00｜时段外，不开仓
+CS	0	22:11:03.742	Trade	2026.10.19 16:41:40   stop loss triggered #58 buy 0.32 XAUUSD 4185.37 sl: 4154.69 tp: 4246.73 [#59 sell 0.32 XAUUSD at 4154.69]
+CS	0	22:11:03.742	Trades	2026.10.19 16:41:40   deal #59 sell 0.32 XAUUSD at 4154.69 done (based on order #59)
+CS	0	22:11:03.742	Trade	2026.10.19 16:41:40   deal performed [#59 sell 0.32 XAUUSD at 4154.69]
+CS	0	22:11:03.742	Trade	2026.10.19 16:41:40   order performed sell 0.32 at 4154.69 [#59 sell 0.32 XAUUSD at 4154.69]
+CS	0	22:11:03.742	Trade	2026.10.20 09:00:00   market sell 0.36 XAUUSD sl: 4146.92 tp: 4064.60 (4119.48 / 4119.89 / 4119.48)
+CS	0	22:11:03.742	Trades	2026.10.20 09:00:00   deal #60 sell 0.36 XAUUSD at 4119.48 done (based on order #60)
+CS	0	22:11:03.742	Trade	2026.10.20 09:00:00   deal performed [#60 sell 0.36 XAUUSD at 4119.48]
+CS	0	22:11:03.742	Trade	2026.10.20 09:00:00   order performed sell 0.36 at 4119.48 [#60 sell 0.36 XAUUSD at 4119.48]
+CS	0	22:11:03.742	TrendBT (XAUUSD,H1)	2026.10.20 09:00:00   CTrade::OrderSend: market sell 0.36 XAUUSD sl: 4146.92 tp: 4064.60 [done at 4119.48]
+CS	0	22:11:03.742	TrendBT (XAUUSD,H1)	2026.10.20 09:00:00   信号 做空｜信号K开盘 日本时间 2026.10.20 14:00｜开仓 0.36 手 @ 4119.48，止损 4146.92，止盈 4064.60
+CS	0	22:11:03.742	Trade	2026.10.20 17:25:20   stop loss triggered #60 sell 0.36 XAUUSD 4119.48 sl: 4146.92 tp: 4064.60 [#61 buy 0.36 XAUUSD at 4146.92]
+CS	0	22:11:03.742	Trades	2026.10.20 17:25:20   deal #61 buy 0.36 XAUUSD at 4146.92 done (based on order #61)
+CS	0	22:11:03.742	Trade	2026.10.20 17:25:20   deal performed [#61 buy 0.36 XAUUSD at 4146.92]
+CS	0	22:11:03.742	Trade	2026.10.20 17:25:20   order performed buy 0.36 at 4146.92 [#61 buy 0.36 XAUUSD at 4146.92]
+CS	0	22:11:03.742	TrendBT (XAUUSD,H1)	2026.10.20 20:00:00   信号 做空｜信号K开盘 日本时间 2026.10.21 01:00｜时段外，不开仓
+CS	0	22:11:03.743	Trade	2026.10.21 03:00:00   market sell 0.56 XAUUSD sl: 4131.55 tp: 4078.60 (4113.90 / 4114.36 / 4113.90)
+CS	0	22:11:03.743	Trades	2026.10.21 03:00:00   deal #62 sell 0.56 XAUUSD at 4113.90 done (based on order #62)
+CS	0	22:11:03.743	Trade	2026.10.21 03:00:00   deal performed [#62 sell 0.56 XAUUSD at 4113.90]
+CS	0	22:11:03.743	Trade	2026.10.21 03:00:00   order performed sell 0.56 at 4113.90 [#62 sell 0.56 XAUUSD at 4113.90]
+CS	0	22:11:03.743	TrendBT (XAUUSD,H1)	2026.10.21 03:00:00   CTrade::OrderSend: market sell 0.56 XAUUSD sl: 4131.55 tp: 4078.60 [done at 4113.90]
+CS	0	22:11:03.743	TrendBT (XAUUSD,H1)	2026.10.21 03:00:00   信号 做空｜信号K开盘 日本时间 2026.10.21 08:00｜开仓 0.56 手 @ 4113.90，止损 4131.55，止盈 4078.60
+CS	0	22:11:03.743	TrendBT (XAUUSD,H1)	2026.10.21 10:00:00   信号 做空｜信号K开盘 日本时间 2026.10.21 15:00｜已有持仓，不开仓
+CS	0	22:11:03.743	Trade	2026.10.21 14:23:40   stop loss triggered #62 sell 0.56 XAUUSD 4113.90 sl: 4131.55 tp: 4078.60 [#63 buy 0.56 XAUUSD at 4131.55]
+CS	0	22:11:03.743	Trades	2026.10.21 14:23:40   deal #63 buy 0.56 XAUUSD at 4131.55 done (based on order #63)
+CS	0	22:11:03.743	Trade	2026.10.21 14:23:40   deal performed [#63 buy 0.56 XAUUSD at 4131.55]
+CS	0	22:11:03.743	Trade	2026.10.21 14:23:40   order performed buy 0.56 at 4131.55 [#63 buy 0.56 XAUUSD at 4131.55]
+CS	0	22:11:03.744	Trade	2026.10.23 03:00:00   market sell 1.11 XAUUSD sl: 4032.53 tp: 4005.53 (4023.53 / 4023.99 / 4023.53)
+CS	0	22:11:03.744	Trades	2026.10.23 03:00:00   deal #64 sell 1.11 XAUUSD at 4023.53 done (based on order #64)
+CS	0	22:11:03.744	Trade	2026.10.23 03:00:00   deal performed [#64 sell 1.11 XAUUSD at 4023.53]
+CS	0	22:11:03.744	Trade	2026.10.23 03:00:00   order performed sell 1.11 at 4023.53 [#64 sell 1.11 XAUUSD at 4023.53]
+CS	0	22:11:03.744	TrendBT (XAUUSD,H1)	2026.10.23 03:00:00   CTrade::OrderSend: market sell 1.11 XAUUSD sl: 4032.53 tp: 4005.53 [done at 4023.53]
+CS	0	22:11:03.744	TrendBT (XAUUSD,H1)	2026.10.23 03:00:00   信号 做空｜信号K开盘 日本时间 2026.10.23 08:00｜开仓 1.11 手 @ 4023.53，止损 4032.53，止盈 4005.53
+CS	0	22:11:03.744	Trade	2026.10.23 03:59:20   stop loss triggered #64 sell 1.11 XAUUSD 4023.53 sl: 4032.53 tp: 4005.53 [#65 buy 1.11 XAUUSD at 4032.53]
+CS	0	22:11:03.744	Trades	2026.10.23 03:59:20   deal #65 buy 1.11 XAUUSD at 4032.53 done (based on order #65)
+CS	0	22:11:03.744	Trade	2026.10.23 03:59:20   deal performed [#65 buy 1.11 XAUUSD at 4032.53]
+CS	0	22:11:03.744	Trade	2026.10.23 03:59:20   order performed buy 1.11 at 4032.53 [#65 buy 1.11 XAUUSD at 4032.53]
+CS	0	22:11:03.744	Trade	2026.10.23 11:00:00   market sell 0.58 XAUUSD sl: 4028.44 tp: 3976.93 (4011.27 / 4011.62 / 4011.27)
+CS	0	22:11:03.744	Trades	2026.10.23 11:00:00   deal #66 sell 0.58 XAUUSD at 4011.27 done (based on order #66)
+CS	0	22:11:03.744	Trade	2026.10.23 11:00:00   deal performed [#66 sell 0.58 XAUUSD at 4011.27]
+CS	0	22:11:03.744	Trade	2026.10.23 11:00:00   order performed sell 0.58 at 4011.27 [#66 sell 0.58 XAUUSD at 4011.27]
+CS	0	22:11:03.744	TrendBT (XAUUSD,H1)	2026.10.23 11:00:00   CTrade::OrderSend: market sell 0.58 XAUUSD sl: 4028.44 tp: 3976.93 [done at 4011.27]
+CS	0	22:11:03.744	TrendBT (XAUUSD,H1)	2026.10.23 11:00:00   信号 做空｜信号K开盘 日本时间 2026.10.23 16:00｜开仓 0.58 手 @ 4011.27，止损 4028.44，止盈 3976.93
+CS	0	22:11:03.744	Trade	2026.10.23 12:06:40   stop loss triggered #66 sell 0.58 XAUUSD 4011.27 sl: 4028.44 tp: 3976.93 [#67 buy 0.58 XAUUSD at 4028.44]
+CS	0	22:11:03.744	Trades	2026.10.23 12:06:40   deal #67 buy 0.58 XAUUSD at 4028.44 done (based on order #67)
+CS	0	22:11:03.744	Trade	2026.10.23 12:06:40   deal performed [#67 buy 0.58 XAUUSD at 4028.44]
+CS	0	22:11:03.744	Trade	2026.10.23 12:06:40   order performed buy 0.58 at 4028.44 [#67 buy 0.58 XAUUSD at 4028.44]
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   ========== TrendBT 回测结果 ==========
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   品种 XAUUSD  周期 PERIOD_H1  初始余额 100000.00  每笔风险 1.00%（1000.00）  盈亏比 2.0
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   时段过滤 开（日本时间 08:00～23:00 开盘的信号K）  周五平仓 关  止损含信号K 是
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   信号 63 个：开仓 33，时段外 23，周五平仓后 0，已有持仓 7，手数不足 0，止损无效/下单失败 0
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   已平仓 33 笔（未平仓 0 笔不计）  胜率 45.5%  止盈 15 / 止损 18 / 其他 0
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   期望值：每笔 0.356 R  =  每笔 351.64 美元
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   平均盈利 1.99 R  平均亏损 -1.01 R  盈利因子 1.65
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   净盈亏 11604.13 美元（初始余额的 11.60%）  合计 11.74 R
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   最大回撤（按平仓结果）：7991.93 美元 = 初始余额的 7.99% = 高点的 6.68% = 8.0 R
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   最多连续亏损 8 笔
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   上一笔平仓后 1 小时内又开仓 1 笔（其中上一笔亏损的 0 笔）——按 FTMO 交易思路规则，这些要和上一笔合并计算风险
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   做多 14 笔，胜率 50.0%，期望值 0.488 R，合计 6.83 R
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   做空 19 笔，胜率 42.1%，期望值 0.259 R，合计 4.91 R
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   按年份：年份  笔数  胜率  合计R  期望值R  净盈亏%（相对初始余额）
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59     2026    33   45.5%    11.74   0.356    11.60%
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   注：净值曲线的最大回撤（含持仓中的浮亏）请看测试器报告里的「净值最大回撤」
+CS	0	22:11:03.745	TrendBT (XAUUSD,H1)	2026.10.23 23:49:59   ======================================
+CS	0	22:11:03.745	Tester	final balance 111604.13 USD
+CS	0	22:11:03.745	Tester	OnTester result 0.3557469790677012
+CS	0	22:11:03.748	Tester	XAUUSD,H1: 387056 ticks, 1631 bars generated. Test passed in 0:00:00.101 (including ticks preprocessing 0:00:00.015).
+CS	0	22:11:03.748	Tester	47 Mb memory used including 0.94 Mb of history data, 64 Mb of tick data
+CS	0	22:11:03.748	Tester	log file "D:\MT5\FTMO_A\Tester\Agent-127.0.0.1-3000\logs\20261026.log" written
+CS	0	22:11:03.750	Tester	test Experts\TrendBT.ex5 on XAUUSD,H1 thread finished
+CS	0	22:11:03.797	127.0.0.1	tester forced to close
+CS	0	22:11:03.797	127.0.0.1	prepare for shutdown
+CS	0	22:11:03.797	127.0.0.1	stop immediately
+CS	0	22:11:03.797	127.0.0.1	shutdown finished
+CS	0	22:11:04.027	Server	MetaTester 5 stopped

@@ -15,6 +15,7 @@ param(
   [int]$TimeoutMin = 9,
   [int]$ExecMode = 0,                                 # 0 = 无延迟，-1 = 随机延迟，>0 = 固定延迟毫秒
   [string]$Root = 'D:\MT5\FTMO_A',                    # 便携终端所在文件夹（槽位）
+  [string]$Leverage = '1:100',                        # 测试器的账户杠杆
   [string]$Login = "",                                # 留空 = 用终端里保存的账户
   [string]$Server = ""
 )
@@ -33,7 +34,7 @@ if ($Login) { $lines += '[Common]', "Login=$Login"; if ($Server) { $lines += "Se
 $lines += @(
   '[Tester]', "Expert=$Expert", 'Symbol=XAUUSD', 'Period=H1', "Model=$Model",
   "ExecutionMode=$ExecMode", 'Optimization=0', "FromDate=$From", "ToDate=$To", 'ForwardMode=0',
-  'Deposit=100000', 'Currency=USD', 'Leverage=1:100', 'ProfitInPips=0', 'Visual=0',
+  'Deposit=100000', 'Currency=USD', "Leverage=$Leverage", 'ProfitInPips=0', 'Visual=0',
   'UseLocal=1', 'UseRemote=0', 'UseCloud=0',
   'ShutdownTerminal=1', 'ReplaceReport=1', "Report=GridEA_reports\$Name"
 )
