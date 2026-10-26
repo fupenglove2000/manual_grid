@@ -6,3 +6,5 @@ backtest/configs/
 *.ex5
 # Python 缓存
 __pycache__/
+# Claude Code 的本机设置
+.claude/
